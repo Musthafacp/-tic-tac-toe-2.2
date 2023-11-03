@@ -45,7 +45,7 @@ function startgame(e) {
             flag = 1;
         }
         count += 1;
-        if (count == 9) {
+        if (count == 9 && check_win(o_pos, winning_combos) == false && check_win(x_pos, winning_combos) == false) {
             document.getElementById("result").style.visibility = "visible"
             document.getElementById("message").innerText = "Its Draw"
             document.getElementById("button").addEventListener("click", () => {
